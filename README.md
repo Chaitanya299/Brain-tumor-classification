@@ -26,16 +26,6 @@ A full-stack deep learning web application for brain tumor classification using 
 
 ---
 
-## ⚠️ Model File Not Included (100MB GitHub Limit)
-
-Due to GitHub’s 100MB file upload limit, the trained model file (`vgg16_model.h5`) is not stored in this repository.
-
-### 📦 Download the Model
-
-👉 [Download `vgg16_model.h5`](https://drive.google.com/your-download-link)
-
----
-
 ## 🗂 How to Use the Model
 
 ### 🔁 Option A: Google Colab (Recommended)
