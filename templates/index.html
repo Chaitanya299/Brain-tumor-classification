@@ -1,0 +1,73 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brain MRI Classifier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: #0f0f0f;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      max-width: 500px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #ffffffcc;
+    }
+    input[type="file"] {
+      margin-bottom: 1.5rem;
+      border: none;
+      background: transparent;
+      color: #ccc;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      background: linear-gradient(90deg, #1f8ef1, #5f27cd);
+      color: white;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 14px rgba(31, 142, 241, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Upload Brain MRI Image</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" accept=".jpg,.jpeg,.png" required>
+      <br>
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+</body>
+</html>
